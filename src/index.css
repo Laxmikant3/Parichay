@@ -1,0 +1,75 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+body {
+  background-color: var(--bg-color);
+  color: #ffffff;
+  font-family: Average, sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Theme/Mode */
+:root {
+  /* Light-Mode */
+  --bg-color: #ffffff;
+  --maintext-color: #000000;
+  /* Theme */
+  --text-color: #9766e3;
+  --hovertext-color: #000000;
+  --subtext-color: #d8b4fe;
+}
+/* Dark-Mode */
+html.dark {
+  --bg-color: #000000;
+  --maintext-color: #ffffff;
+  --infotext-color: #d1d5dc;
+}
+/* Theme */
+[data-theme="orange"] {
+  --text-color: #f27d05;
+  --hovertext-color: #000000;
+  --subtext-color: #ffd6a7;
+}
+[data-theme="blue"] {
+  --text-color: #5593f6;
+  --hovertext-color: #000000;
+  --subtext-color: #3b82f6;
+}
+[data-theme="purple"] {
+  --text-color: #9766e3;
+  --hovertext-color: #000000;
+  --subtext-color: #d8b4fe;
+}
+[data-theme="green"] {
+  --text-color: #3bde76;
+  --hovertext-color: #000000;
+  --subtext-color: #86efac;
+}
+
+/* For Webkit browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 6px; /* very thin */
+  height: 6px; /* horizontal scrollbar if any */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* hide the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1); /* almost invisible */
+  border-radius: 10px;
+}
+
+/* Optional: hover effect */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: rgba(0, 0, 0, 0.1) transparent;
+}
